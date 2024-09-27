@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build in Objects</title>
+</head>
+<body>
+    <script>
+        /*
+        OBJETOS MÁS COMUNES:
+            -String()
+            -Number()
+            -Boolean()
+            -Array()
+            -Object()
+            -Function()
+            -Regexp()
+            -Date()
+            -Error()
+            -Symbol()
+        */
+
+        var str1 = new String("Hello");
+        var str2 = "adiós";
+
+        console.log(str1, str2);
+        console.log(typeof str1, str2);
+        console.log("primera letra de Hola: ", str1[0]);
+        console.log("Primera letra de adiós: ", str2[0]);
+
+        //en ambos caso de pueden utilizar los mismos métodos
+        var array1 = new Array(1, 2, 3, 4); //cuando lo declaramos como objeto se pasan por parametro entre paréntesis
+        var array2 = [4, 5, 6]; //cuando lo declaramos como array se pasan por parametro entre corchetes
+
+        console.log(array1, array2);
+        console.log(typeof array1, typeof array2);
+        console.log("Primer elemento de array1: ", array1[0]);
+        console.log("Primer elemento de array2: ", array2[0]);
+
+    </script>
+</body>
+</html>

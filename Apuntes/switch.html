@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch</title>
+</head>
+<body>
+    <script>
+        var hoy = new Date();
+        console.log(hoy);
+        
+        var dia = hoy.getDate();
+        console.log(dia);
+
+        var resultado;
+
+        switch (dia){
+            case 0 : resultado = "Domingo";ç
+                break;
+            case 1 : resultado = "Lunes";
+                break;
+            case 2 : resultado = "Martes";
+                break;
+            case 3 : resultado = "Miércoles";
+                break;
+            case 4 : resultado = "Jueves";
+                break;
+            case 5 : resultado = "Viernes";
+                break;
+            case 6 : resultado = "Sábado";
+                break;
+            default : resultado = "Sin día";
+        }
+        console.log(resultado);
+    </script>
+</body>
+</html>

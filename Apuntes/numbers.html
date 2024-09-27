@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numbers</title>
+</head>
+<body>
+    <script>
+        //no se distingue entre enteros y flotantes
+        //64bits en punto flotante IEEE 754 es un estándar de lenguaje
+
+        var x = 3.98765;
+        var y = 4;
+        var a = "99" //string
+        
+        console.log(Number.MAX_VALUE); // valor máximo que puedes usar
+        console.log(Number.MIN_VALUE); //valor mínimo que puedes usar
+
+        var z = parseInt(a); // conversión de string a number
+        console.log( a, typeof a, z, typeof z);
+        
+        var zz = parseFloat(y);
+        console.log(zz);
+
+        var w = parseInt(x * y); //pasar a entero la operación de decimales
+        console.log(w);
+
+        var s = x.toFixed(2); //indica la cantidad de decimales que quieres mostrar
+        console.log(s);
+
+        var b = "Hallo"; //string
+        var c = parseInt(b);
+        console.log(c); //NaN (not a number) -> ES UN VALOR 
+
+        console.log(Number.isNaN(b)); //false -> b no tiene el valor NaN
+        console.log(Number.isNaN(x)); // false -> x no tiene el valor NaN
+        console.log(Number.isNaN(c)); // true -> c tiene el valor NaN
+        console.log(isNaN(parseInt(b))); // es otra manera de escribirlo sin el objeto delante
+    </script>
+</body>
+</html>

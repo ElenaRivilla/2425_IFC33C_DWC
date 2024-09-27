@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+</head>
+<body>
+    <script>
+        var x = "Hallo"; // En el string se asignan valores entre comillas dobles("")
+        var y = 'Hallo'; //o entre comillas simples ('')
+        var z = `Hallo`; // o entre comillas francesas (``) desde ES6
+
+        //Las comillas dobles y simples no son multilinea
+
+        //string multilinea
+        var w = "Hallo, " +
+        "Wie geht's?";
+
+        //concatenar strings
+        var q = w.concat(" Der tag könnte nicht besser sein");
+        //para poner comillas dentro de un string
+        var t = "Hallo \"Helen\""; //se emplea la barra invertida para escapar el caracter
+        var s = 'Hallo \'Helen\''; //se emplea la barra invertida para escapar el caracter
+
+        console.log(x);
+        console.log(y);
+        console.log(z);
+        console.log(w);
+        console.log(q);
+        console.log(t);
+        console.log(s);
+
+        //propiedadades
+        console.log(x.length); //devuelve la longitud del string
+
+        //los índices siempre empiezan en 0
+        for (var i = 0; i < w.length; i++){
+            console.log(w[i]);
+        }
+
+        console.log("En la posición 4 del string q tenenmos la letra ", q.charAt(4)); //devuelve el caracter en la posición indicada
+        console.log("El código UTF-16 del carácter de la posición 4 es ", q.charCodeAt(4)); //devuelve el código UTF-16 del caracter en la posición indicada
+        console.log("La posición de la letra 't' en el string q es ", q.indexOf("t")); //devuelve la posición de la primera ocurrencia del caracter indicado
+        
+        console.log(q.indexOf("t", 3)); //devuelve la posición de la primera ocurrencia del caracter indicado a partir de la posición indicada
+        console.log(q.search("t")); //devuelve la posición de la primera ocurrencia del caracter indicado
+        console.log(q.includes("t")); //devuelve true si el string contiene el caracter indicado
+        console.log(q.includes("y")); //devuelve false si el string no contiene el caracter indicado
+    </script>
+</body>
+</html>

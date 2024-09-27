@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math</title>
+</head>
+<body>
+    <script>
+        var a = 3.2;
+        var b = 5.4;
+
+        const pi = Math.PI; //lo hemos hecho constante porque el número PI no es modificable
+
+        //redondear
+        //redondeo hacia abajo
+        var c = Math.floor(a);
+        var d = Math.floor(b);
+        console.log(a, "Redondeado:", c, b,"Redondeado:", d);
+
+        //redondeo hacia arriba
+        var e = Math.ceil(a);
+        var f = Math.ceil(b);
+        console.log(a, "Redondeado:", e, b,"Redondeado:", f);
+        
+        //redondeo natural
+        var g = Math.round(a);
+        var h = Math.round(b);
+        console.log(a, "Redondeado:", g, b,"Redondeado:", h);
+        
+        //para ver todas las operaciones de la librería podemos escribir Math.
+        //Número aleatorio
+        var i = Math.random(); // redondeo entre [0, 1]
+        console.log(i);
+
+        //Ejercicio: obtener un numero aleatorio entre [1, 6]
+        var j = Math.random() * 6;
+        console.log(j);
+
+        var k = Math.random() * 6 + 1; //numero aleatorio entre 1 y 5.99
+        var l = Math.floor(Math.random() * 6 + 1); //numero aleatorio entre 1 y 6 incluido
+        console.log(parseInt(l)); //parseInt para que no saque decimales
+
+        //Ejercicio: obtener número aleatorio entre [2, 6]
+        var m = Math.random() * 5; // valores entre [0, 5]
+        var n = Math.random() * (6 - 2 + 1) + 2; //valores entre [2, 6]
+        console.log(parseInt(n));
+
+        var o = Math.floor(Math.random() * (6 - 2 + 1) + 2);
+
+        var max = 6;
+        var min = 2;
+        var formula = Math.floor(Math.random() * (max - min + 1) + min); //formula para sacar un numero aleatorio entre dos numeros
+
+
+    </script>
+</body>
+</html>

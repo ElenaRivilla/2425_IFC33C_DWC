@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+</head>
+<body>
+    <script>
+        var a = null;   //null
+        var b;          //undefined
+        var c = false;  //boolean
+        var d = 4;      //number
+        var e = 5.6     //number
+        var f = "Hello" //string
+        var g = {       //object
+            name: "Helen",
+            age: 25
+        };             
+        
+        var h = [1, 2, 3, 4] //object
+        console.log(a, b, c, d, e, f, g);
+        console.log(typeof a);
+        console.log(typeof b);
+        console.log(typeof c);
+        console.log(typeof d);
+        console.log(typeof e);
+        console.log(typeof f);
+        console.log(typeof g);
+        console.log(typeof h);
+
+        //tipos de datos dinámicos
+        a = 3; // reasignas la variable
+        console.log(a);
+        console.log(typeof a);
+
+        //var -> para declarar variables
+        //ES6 -> no se declaraan las variables con var, se declaran con let o const
+        //let -> para declarar variables locales NO GLOBAL
+        //const -> para declarar constantes
+
+        //ámbito
+        let p1 = "hola"; //var declara las variables globales y esto genera conflicto
+        function prueba(p1){
+            p1 = "adios";
+            console.log(p1)
+        }
+        prueba();
+        console.log(p1);
+
+        z = 99 //MALA PRÁCTICA provoca un error que se llama hoisting. SIEMPRE DECLARAR
+        console.log(z);
+    </script>
+</body>
+</html>
