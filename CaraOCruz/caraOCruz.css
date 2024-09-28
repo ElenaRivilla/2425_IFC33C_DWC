@@ -1,0 +1,80 @@
+@font-face {
+    font-family: letra;
+    src: url(fonts/RetroMario-Regular.otf);
+}
+
+:root{
+    --color1: red;
+    --color2: blue;
+    --color3: green;
+    --color4: yellow;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: rgb(182, 253, 255);
+}
+
+h1{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;  
+    font-family: letra;
+    font-size: 90px;
+}
+
+.bounce {
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    40% { transform: translateY(-20px); }
+    50% { transform: translateY(0px); }
+    60% { transform: translateY(-15px); }
+    100% { transform: translateY(-20px); } 
+}
+
+button {
+    border-radius: 1500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+}
+
+img {
+    width: 500px;
+    height: 500px;
+    filter: drop-shadow(0px 20px 15px rgb(129, 184, 188));
+}
+
+button:hover {
+    transform: translateY(10px);
+}
+
+.color1{
+    color: var(--color1);      
+}
+
+.color2{
+    color: var(--color2);
+}
+
+.color3{
+    color: var(--color3);
+}
+
+.color4{
+    color: var(--color4);
+}
+
+.color1, .color2, .color3, .color4{
+    text-shadow: 10px 10px 0px rgb(0, 0, 0);
+}
