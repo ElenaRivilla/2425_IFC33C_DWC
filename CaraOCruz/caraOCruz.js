@@ -3,18 +3,17 @@ const cruz = 2;
 
 function caraOCruz(){
     let ganador = Math.floor(Math.random() * (cruz - cara + 1) + cara);
+    let asadas = document.getElementById("coin1");
 
     if (ganador === cara) {
-        window.alert("Has ganado, ha salido cara");
-        window.confirm("¿Quieres volver a jugar?");
+        asadas.src="svg/coin.svg";
+        setTimeout(() => window.alert("Has ganado, ha salido cara"),200);
+        setTimeout(() => window.confirm("¿Quieres volver a jugar?"),200);
+       
     } else {
-        window.alert("Has perdido, ha salido cruz");
-        window.confirm("¿Quieres volver a jugar?");
+        asadas.src="svg/coin2.svg";
+        setTimeout(() => window.alert("Has perdido, ha salido cruz"),200);
+        setTimeout(() => window.confirm("¿Quieres volver a jugar?"),200);
     }
 }
 
-function reload() {
-    caraOCruz();
-    window.location.reload();
-   
-}
