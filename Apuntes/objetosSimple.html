@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos simples</title>
+</head>
+<body>
+    <script>
+        //los objetos en JS son prototypes
+        var persona = {
+            nombre: "Elena",
+            apellido: "Rivilla",
+        };  
+        console.log(persona);
+        console.log(persona.nombre);
+        console.log(persona.apellido);
+
+        persona.numPies = 2; //añadimos una propiedad al objeto
+        console.log(persona, persona.numPies);
+        console.log(persona.numOjos); //undefined
+
+        var a; //variable indefinida, es equivalente a la línea 21
+        console.log(persona);
+    </script>
+</body>
+</html>

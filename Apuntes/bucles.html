@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucles</title>
+</head>
+<body>
+    <script>
+        function Usuario(username, email, nombre){
+            this.username = username;
+            this.email = email;
+            this.nombre = nombre;
+        }
+        var usuario1 = new Usuario("Helen", "mariaelenarivilla@paucasesnavescifp.cat", "Elena");
+        var usuario2 = new Usuario("Ivánovix", "ivanmartin@paucasesnavescifp.cat", "Iván");
+        var usuario3 = new Usuario("blaserna", "lbe@paucasesnavescifp.cat", "Belén");
+
+        var usuarios = [usuario1, usuario2, usuario3]; //array de objetos
+
+        //while (do while)
+        var i = 0;
+        while(i < usuarios.length){
+            console.log(usuarios[i].nombre);
+            i++;
+        }
+
+        //for
+        for(var i = 0; i < usuarios.length; i++){
+            console.log(usuarios[i].username);
+        }
+
+        //for in -> iterar las propiedades de un objeto
+        for(var clave in usuarios){
+            console.log(clave);
+        }
+
+        //for of -> iterar los valores 
+    </script>
+</body>
+</html>
