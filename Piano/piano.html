@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -11,37 +12,75 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/icons/favicon-16x16.png">
     <link rel="icon" type="image/ico" href="assets/img/icons/favicon.ico">
 </head>
+
 <body>
-    <ul class="piano">
-        <li class="key">
-            <span class="white-key" id="C"></span>
-            <span class="black-key" id="Cs"></span>
-        </li>
-        <li class="key">
-            <span class="white-key" id="D"></span>
-            <span class="black-key" id="Ds"></span>
-        </li>
-        <li class="key">
-            <span class="white-key" id="E"></span>
-        </li>
-        <li class="key">
-            <span class="white-key" id="F"></span>
-            <span class="black-key" id="Fs"></span>
-        </li>
-        <li class="key">
-            <span class="white-key" id="G"></span>
-            <span class="black-key" id="Gs"></span>
-        </li>
-        <li class="key">
-            <span class="white-key" id="A"></span>
-            <span class="black-key" id="As"></span>
-        </li>
-        <li class="key">
-            <span class="white-key" id="B"></span>
-        </li>
-        <li class="key">
-            <span class="white-key" id="C2"></span>
-        </li>
-    </ul>
+    <div class="contenedor">
+        <h1 class="titulo">Score Finder</h1>
+        <ul class="piano">
+            <li class="key">
+                <span class="white-key" id="C"></span>
+                <span class="black-key" id="Cs"></span>
+            </li>
+            <li class="key">
+                <span class="white-key" id="D"></span>
+                <span class="black-key" id="Ds"></span>
+            </li>
+            <li class="key">
+                <span class="white-key" id="E"></span>
+            </li>
+            <li class="key">
+                <span class="white-key" id="F"></span>
+                <span class="black-key" id="Fs"></span>
+            </li>
+            <li class="key">
+                <span class="white-key" id="G"></span>
+                <span class="black-key" id="Gs"></span>
+            </li>
+            <li class="key">
+                <span class="white-key" id="A"></span>
+                <span class="black-key" id="As"></span>
+            </li>
+            <li class="key">
+                <span class="white-key" id="B"></span>
+            </li>
+            <li class="key">
+                <span class="white-key" id="C2"></span>
+            </li>
+        </ul>
+        <div class="contenedor-busqueda">
+            <ul class="busqueda">
+                <h1>CERCANT...</h1>
+                <h6>Do Re Mi Fa#</h6>
+                <button>Esborrar</button>
+            </ul>
+            <ul class="resultado">
+                <h1>RESULTATS:</h1>
+                <div class="contenedor-canciones">
+                    <table>
+                        <tr>
+                            <td>
+                                Sant Antoni i el dimoni<br>
+                                <a href="#">Letra</a>
+                            </td>
+                            <td>
+                                <button>Reproduir cançó</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                La Balanguera<br>
+                                <a href="#">Letra</a>
+                            </td>
+                            <td>
+                                <button>Reproduir cançó</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </ul>
+        </div>
+    </div>
+
 </body>
+
 </html>

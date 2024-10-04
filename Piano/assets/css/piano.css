@@ -1,4 +1,22 @@
-/*css tret de https://github.com/LFeh/piano/blob/master/dev/assets/css/style.css*/
+@font-face {
+    font-family: montserrat;
+    src: url(../fonts/Montserrat.ttf);
+}
+
+@font-face {
+    font-family: oswald;
+    src: url(../fonts/Oswald.ttf);
+}
+
+@font-face {
+    font-family: ralsteda;
+    src: url(../fonts/Ralsteda.otf);
+}
+
+body{
+    background-image: url(../img/background/background11.jpg);
+}
+
 .piano {
     background: -webkit-linear-gradient(-65deg, #000000, #222222, #000000, #666666, #222222 75%);
     background: -moz-linear-gradient(-65deg, #000000, #222222, #000000, #666666, #222222 75%);
@@ -9,6 +27,7 @@
     padding: 0 1% 3%;
     text-align: center;
     border-radius: 10px;
+    height: auto;
 }
 
 .key {
@@ -64,4 +83,103 @@
 .key .black-key.active {
     border-bottom-width: 3px;
     top: 0;
+}
+
+.titulo {
+    font-family: ralsteda;
+    text-shadow: 0 4px 4px rgba(255, 255, 255, 0.9);
+    font-size: 70px;
+    color: black;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 900px;
+}
+
+.contenedor-busqueda {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 900px;
+    height: 100%;
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.busqueda {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: auto;
+    margin: 30px 0 30px 0;
+}
+
+.contenedor-canciones {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+button {
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+button:hover {
+    background-color: #cc0000;
+}
+
+h1 {
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    margin-top: 30px;
+    font-family: Oswald;
+}
+
+h6, a, td {
+    font-family: montserrat;
+    font-size: 15px;
+    color: black;
+    margin: 10px;
+}
+
+a{
+    margin: 0;
+    color: red;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+td {
+    padding: 10px;
+    font-size: 16px;
 }
