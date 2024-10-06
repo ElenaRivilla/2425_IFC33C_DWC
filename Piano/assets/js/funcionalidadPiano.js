@@ -16,7 +16,7 @@ function cercador(partituras) {
 
     console.log("Partitura:", partituras);
 
-    for (let i = 0; i <= partituras.length - cerca.length; i++) {
+    for (let i = 0; i <= partituras.length - cerca.length; i++) { // asegura que siempre tengas suficientes notas en partituras para hacer una comparación completa con cerca sin que se desborde el array
         let secuenciaCoincide = true;
 
         for (let j = 0; j < cerca.length; j++) {
@@ -30,7 +30,7 @@ function cercador(partituras) {
         if (secuenciaCoincide) {
             coincidencias = true;
             for (let k = 0; k < cerca.length; k++) {
-                resultado.push(partituras[i + k]); 
+                resultado.push(partituras[i + k]); // Añade cada nota individualmente a la variable resultado
             }
             break;
         }
@@ -105,5 +105,5 @@ partituras.push(
 
 addCerca("do", "normal");
 addCerca("re", "normal");
-addCerca("do", "normal");
+
 cercador(partituras);
