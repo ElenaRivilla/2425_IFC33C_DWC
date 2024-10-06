@@ -26,6 +26,7 @@ function cercador(partituras) {
             }
         }
 
+        //condicional que pushea a la variable resultado las notas coincidentes
         if (secuenciaCoincide) {
             coincidencias = true;
             for (let k = 0; k < cerca.length; k++) {
@@ -38,6 +39,33 @@ function cercador(partituras) {
     if (coincidencias) {
         console.log("Hay coincidencias, te muestro la secuencia que coincide:");
         console.log(resultado);
+        
+        //condicional que verifica que canción es
+        if (
+            resultado.length === 2 &&
+            resultado[0].nombre === "do" && resultado[0].tipo === "normal" &&
+            resultado[1].nombre === "re" && resultado[1].tipo === "normal"
+        ) {
+            console.log("La canción es la Balanguera o happy birthday");
+        } 
+        else if (
+            resultado.length === 3 &&
+            resultado[0].nombre === "do" && resultado[0].tipo === "normal" &&
+            resultado[1].nombre === "re" && resultado[1].tipo === "normal" &&
+            resultado[2].nombre === "do" && resultado[2].tipo === "normal"
+        ) {
+            console.log("La canción es Happy Birthday");
+        } 
+        else if (
+            resultado.length === 1 &&
+            resultado[0].nombre === "la" && resultado[0].tipo === "sostenido"
+        ) {
+            console.log("La canción es La Balanguera");
+        } 
+        else {
+            console.log("Sin resultados");
+        }
+        return resultado;
 
     } else {
         console.log("No hay coincidencias");
@@ -45,6 +73,7 @@ function cercador(partituras) {
 }
 
 // La Balanguera
+/* 
 partituras.push(
     new Nota("do", "normal"),
     new Nota("re", "normal"),
@@ -55,10 +84,11 @@ partituras.push(
     new Nota("sol", "normal"),
     new Nota("la", "sostenido"),
     new Nota("la", "sostenido")
-);
+); 
+*/
 
 // Happy Birthday
-/* partituras.push(
+partituras.push(
     new Nota("do", "normal"),
     new Nota("do", "normal"),
     new Nota("re", "normal"),
@@ -71,9 +101,9 @@ partituras.push(
     new Nota("do", "normal"),
     new Nota("sol", "normal"),
     new Nota("fa", "normal"),
-); */
+);
 
 addCerca("do", "normal");
 addCerca("re", "normal");
-
+addCerca("do", "normal");
 cercador(partituras);
