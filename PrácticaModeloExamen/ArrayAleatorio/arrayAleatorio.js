@@ -1,8 +1,7 @@
 let array = [];
-let longitudArray = 15;
 
-function generarArray() {
-    for (let i = 0; i < longitudArray; i++) {
+function generarArray(length) {
+    for (let i = 0; i < length; i++) {
         array.push(Math.floor(Math.random() * 15) + 1);
     }
 }
@@ -13,6 +12,6 @@ function mostrarAsteriscos() {
     }
 }
 
-generarArray();
+generarArray(15);
 console.log(array);
 mostrarAsteriscos();

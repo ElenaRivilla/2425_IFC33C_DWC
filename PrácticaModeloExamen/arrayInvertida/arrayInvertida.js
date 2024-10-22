@@ -5,11 +5,10 @@ de la función, y construir las bases ahora te ayudará más adelante cuando tra
 Comienza con algo pequeño y ve avanzando. Comienza con una matriz de 5 números y luego prueba tu programa con una 
 matriz más grande para verificar su éxito. */
 let array = []
-let arrayInvertido = []
-let arrayLength = 5;  
+let arrayInvertido = []  
 
-function generarArray(){
-    for (let i = 0; i < arrayLength; i++){
+function generarArray(length){
+    for (let i = 0; i < length; i++){
         array.push(Math.floor(Math.random() * 15) + 1);
     }
     console.log("Array original: ", array);
@@ -20,5 +19,5 @@ function invertirArray(){
     console.log("Array invertido:", arrayInvertido);
 }
 
-generarArray();
+generarArray(5);
 invertirArray();

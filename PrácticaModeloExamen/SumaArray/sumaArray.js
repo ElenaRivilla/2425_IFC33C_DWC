@@ -7,45 +7,44 @@ más desafiante que aparece a continuación.
 
 Desafío intermedio adicional: crea una función que pueda devolver la suma de un número de columna o fila en particular en una tabla. */
 
-let lengthArray = 10;
 let arrayEntero = [];
 let arrayDecimales = [];
 let arrayNegativo = [];
 let arrayNegativoDecimal = [];
 let arrayDimensional = [];
 
-function generarArray(){
-    for (let i = 0; i < lengthArray; i++){
+function generarArray(length){
+    for (let i = 0; i < length; i++){
         arrayEntero.push(Math.floor(Math.random() * 15) + 1);
     }
     console.log(arrayEntero);
 }
 
-function generarArrayDecimales(){
-    for (let i = 0; i < lengthArray; i++){
+function generarArrayDecimales(length){
+    for (let i = 0; i < length; i++){
         resultado = ((Math.random() * 15) + 1).toFixed(2);
         arrayDecimales.push(parseFloat(resultado));
     }
     console.log(arrayDecimales);
 }
 
-function generarArrayNegativo(){
-    for (let i = 0; i < lengthArray; i++){
+function generarArrayNegativo(length){
+    for (let i = 0; i < length; i++){
         arrayNegativo.push(- Math.floor(Math.random() * 15) + 1);
     }
     console.log(arrayNegativo);
 }
 
-function generarArrayNegativoDecimal(){
-    for (let i = 0; i < lengthArray; i++){
+function generarArrayNegativoDecimal(length){
+    for (let i = 0; i < length; i++){
         resultado = (( -Math.random() * 15) + 1).toFixed(2);
         arrayNegativoDecimal.push(parseFloat(resultado));
     }
     console.log(arrayNegativoDecimal);
 }
 
-function generarArrayDimensional(lengthArray, numColumns) {
-    for (let i = 0; i < lengthArray; i++) {
+function generarArrayDimensional(length, numColumns) {
+    for (let i = 0; i < length; i++) {
         const fila = []; 
 
         for (let j = 0; j < numColumns; j++) {
@@ -107,16 +106,16 @@ function sumarArrayDimensional(fila1, col1, fila2, col2) {
 
 
 function imprimirTodo(){
-    generarArray();
+    generarArray(10);
     sumarArrayEntero();
 
-    generarArrayNegativo();
+    generarArrayNegativo(10);
     sumarArrayNegativo();
 
-    generarArrayNegativoDecimal();
+    generarArrayNegativoDecimal(10);
     sumarArrayNegativoDecimal();
 
-    generarArrayDecimales();
+    generarArrayDecimales(10);
     sumarArrayDecimales();
 
     generarArrayDimensional(3, 3);
