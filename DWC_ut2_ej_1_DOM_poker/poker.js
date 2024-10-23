@@ -72,47 +72,50 @@ function jugar() {
     let resultadoAnterior = containerTexto.querySelector("h2");
     let texto = document.createElement("h1");
     let botonJugar = document.querySelector("button");
-    let nombreJugador = document.querySelector("#jugador"); 
-    let divCartas = document.querySelector(".container-cartas"); 
- 
+    let nombreJugador = document.querySelector("#jugador");
+    let divCartas = document.querySelector(".container-cartas");
+
     if (resultadoAnterior) {
         resultadoAnterior.remove();
     }
-
-    divCartas.innerHTML = '';
     nombreJugador.style.display = "none";
     botonJugar.style.display = "none";
+    divCartas.innerHTML = '';
 
-    let contador = 3; 
+    if (barajaEntera.length < 5) {
+        if (repartir()) {
+            let resultat = document.createElement("h2");
+            resultat.innerHTML = esGanador();
+            containerTexto.appendChild(resultat);
+        }
+
+        texto.innerHTML = 'Se ha acabado la baraja';
+        containerTexto.appendChild(texto);
+        return;
+    }
+
+    let contador = 3;
     const cuentaAtras = setInterval(() => {
-        divCartas.innerHTML = contador;
+        divCartas.innerHTML = contador; 
         contador--;
 
         if (contador < 0) {
             clearInterval(cuentaAtras);
-
-            if (barajaEntera.length === 0) {
-                rellenarBaraja();
-                barajar();
-            }
+            divCartas.innerHTML = '';
 
             if (repartir()) {
                 let resultat = document.createElement("h2");
                 resultat.innerHTML = esGanador();
                 containerTexto.appendChild(resultat);
-            } else {
-                if (!containerTexto.querySelector("h1")) {
-                    texto.innerHTML = 'Se ha acabado la baraja';
-                    containerTexto.appendChild(texto);
-                }
             }
-            botonJugar.style.display = "block";
-            nombreJugador.style.display = "block";
+
+            if (barajaEntera.length >= 5) {
+                botonJugar.style.display = "block";
+                nombreJugador.style.display = "block";
+            }
         }
     }, 1000);
 }
-
-
 
 rellenarBaraja();
 barajar();
