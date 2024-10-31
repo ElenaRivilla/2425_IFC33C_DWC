@@ -1,0 +1,49 @@
+<!-- 
+Dado un array de objetos que representan productos, crea una función que filtre los productos cuyo precio sea mayor a un valor
+ dado y ordene el resultado por nombre de producto alfabéticamente. 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays2</title>
+</head>
+
+<body>
+    <script>
+        let productos = [
+            { nombre: "ordenador", precio: 1000 },
+            { nombre: "movil", precio: 200 },
+            { nombre: "teclado", precio: 300 },
+            { nombre: "raton", precio: 100 }
+        ];
+
+        function filtrarProducto(array, precio) {
+            let productosFiltrados = [];
+
+            for (let i = 0; i < array.length; i++) {
+                if (array[i].precio > precio) {
+                    productosFiltrados.push(array[i]);
+                }
+            }
+
+            for (let i = 0; i < productosFiltrados.length; i++) {
+                for (let j = i + 1; j < productosFiltrados.length; j++) {
+
+                    if (productosFiltrados[i].nombre > productosFiltrados[j].nombre) {
+                        
+                        let temporal = productosFiltrados[i];
+                        productosFiltrados[i] = productosFiltrados[j];
+                        productosFiltrados[j] = temporal;
+                    }
+                }
+            }
+            return productosFiltrados;
+        }
+        console.log(filtrarProducto(productos, 199));
+    </script>
+</body>
+
+</html>

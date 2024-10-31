@@ -1,0 +1,29 @@
+<!--
+Crea un algoritmo que utilice bucles anidados para generar la tabla de multiplicar desde el 1 hasta el 10, y guárdala en un objeto donde
+ las claves sean los números y los valores sean arrays con sus multiplicaciones.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucles</title>
+</head>
+<body>
+    <script>
+        function generarTabla(numeroTabla, tablaMax){
+            tablas = [];
+
+            for(i = 1; i <= numeroTabla; i++){
+                tablas[i] = [];
+                for (j = 0; j <= tablaMax; j++){
+                    tablas[i].push(i.toString() + " x " + j.toString());
+                }
+            }
+            return tablas;
+        }
+        console.log(generarTabla(10, 10));
+    </script>
+</body>
+</html>
+

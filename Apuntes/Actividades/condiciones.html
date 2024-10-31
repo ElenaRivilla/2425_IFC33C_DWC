@@ -1,0 +1,29 @@
+<!--
+Crea una función que determine si un número es primo, compuesto o ni uno ni otro (e.g., 0, 1).
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function esPrimo(numero) {
+            if (numero < 2)
+                return "Ni primo ni compuesto";
+            for (let i = 2; i <= Math.sqrt(numero); i++) {
+                if (numero % i === 0) return "Compuesto";
+            }
+            return "Primo";
+        }
+        console.log(esPrimo(23));
+        console.log(esPrimo(1));
+        console.log(esPrimo(6));
+    </script>
+</body>
+
+</html>
