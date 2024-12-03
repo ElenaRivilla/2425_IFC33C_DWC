@@ -1,6 +1,5 @@
 function generateTable() {
     let table = document.createElement('table');
-    table.border = '1';
     table.style.borderCollapse = 'collapse';
     table.style.width = '50%';
     table.style.margin = '20px auto';
@@ -14,7 +13,7 @@ function generateTable() {
 
             switch (true) {
                 case (i === 0 && j === 0):
-                    cell.innerText = '';
+                    cell.innerText = '0';
                     break;
                 case (i === 0):
                     cell.innerText = j;
@@ -36,8 +35,6 @@ function generateTable() {
         }
         table.appendChild(row);
     }
-
     document.body.appendChild(table);
 }
-
 generateTable();
