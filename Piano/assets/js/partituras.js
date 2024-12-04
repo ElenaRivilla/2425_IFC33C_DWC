@@ -1,8 +1,8 @@
-import {partituras} from './funcionalidadPiano.js';
+import { partituras } from './funcionalidadPiano.js';
 
 let encabezados = ["Títol", "Idioma original", "Accions"];
 
-function tablaPartitura(){
+function tablaPartitura() {
     let div = document.getElementById("container");
     let tabla = document.createElement("table");
     let thead = document.createElement("thead");
@@ -14,32 +14,52 @@ function tablaPartitura(){
     tabla.appendChild(tbody);
     thead.appendChild(tr);
 
-    for (let i = 0; i < encabezados.length; i++){
+    for (let i = 0; i < encabezados.length; i++) {
         let th = document.createElement("th");
-        th.innerHTML = encabezados[i];
+        th.innerText = encabezados[i];
         tr.appendChild(th);
     }
 
-    for (let j = 0; j < 25; j++){
-        for (let i = 0; i < partituras.length; i++){
+    for (let j = 0; j < 25; j++) {
+        let contador = 1;
+        for (let i = 0; i < partituras.length; i++) {
             let tr = document.createElement('tr');
             tbody.appendChild(tr);
-            
+
             let tdTitulo = document.createElement('td');
-            tdTitulo.innerHTML = partituras[i].nombrePartitura;
+            tdTitulo.innerText = partituras[i].nombrePartitura;
             tr.appendChild(tdTitulo);
-    
+            tr.id = contador++;
+
             let tdIdioma = document.createElement('td');
-            tdIdioma.innerHTML = partituras[i].idioma;
+            tdIdioma.innerText = partituras[i].idioma;
             tr.appendChild(tdIdioma);
-            
+
             let tdAcciones = document.createElement('td');
-            tdAcciones.innerHTML = '<img src="./assets/svg/edit.svg"><button>Editar</button><img src="./assets/svg/delete.svg"><button>Esborrar</button>';
+            let editarBoto = document.createElement('button');
+            let editarIcon = document.createElement('img');
+            editarIcon.src = './assets/svg/edit.svg';
+            editarBoto.appendChild(editarIcon);
+            editarBoto.appendChild(document.createTextNode('Editar'));
+            tdAcciones.appendChild(editarBoto);
+
+            let esborrarBoto = document.createElement('button');
+            let esborrarIcon = document.createElement('img');
+            esborrarIcon.src = './assets/svg/delete.svg';
+            esborrarBoto.appendChild(esborrarIcon);
+            esborrarBoto.appendChild(document.createTextNode('Esborrar'));
+            esborrarBoto.onclick = function () {
+                let confirmDelete = confirm(`Estàs segur que vols esborrar l'element ${tr.id}?`);
+                if (confirmDelete) {
+                    alert("Element esborrat!");
+                } else {
+                    alert("Acció cancel·lada");
+                }
+            };
+
+            tdAcciones.appendChild(esborrarBoto);
             tr.appendChild(tdAcciones);
         }
     }
 }
-
-
-
 tablaPartitura();
