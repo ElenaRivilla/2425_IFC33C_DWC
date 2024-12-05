@@ -46,6 +46,7 @@ let usuario = {
 
    saludarFlecha: () => {
       console.log(`Hola mi nombre es ${this.nombre}`);
+      
    }
 }
 
