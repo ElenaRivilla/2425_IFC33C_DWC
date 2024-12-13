@@ -1,0 +1,76 @@
+@font-face {
+    font-family: montserrat;
+    src: url(../fonts/Montserrat.ttf);
+}
+
+@font-face {
+    font-family: oswald;
+    src: url(../fonts/Oswald.ttf);
+}
+
+@font-face {
+    font-family: ralsteda;
+    src: url(../fonts/Ralsteda.otf);
+}
+
+* {
+    font-family: montserrat;
+    font-weight: 400;
+    font-size: 17px;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-image: url(../img/background/background11.jpg);
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    
+}
+h1 {
+    font-family: ralsteda;
+    font-size: 4em;
+    margin: 0 0 40px 0 ;
+}
+
+h5 {
+    margin: 4px 0;
+}
+
+label {
+    margin-bottom: 10px;
+    width: 30%;
+}
+
+button {
+    background-color: red;
+    font-family: montserrat;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    width: 100%;
+    height: 40px;
+    cursor: pointer;
+    margin-top: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+button:hover {
+    background-color: #cc0000;
+}

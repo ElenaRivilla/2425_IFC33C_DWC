@@ -1,14 +1,15 @@
 let cerca = [];
-let partituras = [];
+export let partituras = [];
 
 function Nota(nombre, tipo) {
     this.nombre = nombre;
     this.tipo = tipo;
 }
 
-function Partitura(nombrePartitura, notas) {
+function Partitura(nombrePartitura, notas, idioma) {
     this.nombrePartitura = nombrePartitura;
     this.notas = notas;
+    this.idioma = idioma;
 }
 
 function addCerca(nombre, tipo) {
@@ -65,7 +66,7 @@ partituras.push(
         new Nota("sol", "normal"),
         new Nota("la", "sostenido"),
         new Nota("la", "sostenido"),
-    ]));
+    ], "ca"));
 
 // Happy Birthday
 partituras.push(
@@ -82,7 +83,60 @@ partituras.push(
         new Nota("do", "normal"),
         new Nota("sol", "normal"),
         new Nota("fa", "normal"),
-    ]));
+    ], "en"));
+
+partituras.push(
+    new Partitura("Frère Jacques", [
+        new Nota("do", "normal"),
+        new Nota("re", "normal"),
+        new Nota("mi", "normal"),
+        new Nota("do", "normal"),
+        new Nota("do", "normal"),
+        new Nota("re", "normal"),
+        new Nota("mi", "normal"),
+        new Nota("do", "normal"),
+        new Nota("mi", "normal"),
+        new Nota("fa", "normal"),
+        new Nota("sol", "normal"),
+        new Nota("mi", "normal"),
+        new Nota("fa", "normal"),
+        new Nota("sol", "normal"),
+        new Nota("sol", "normal"),
+        new Nota("la", "normal"),
+        new Nota("sol", "normal"),
+        new Nota("fa", "normal"),
+        new Nota("mi", "normal"),
+        new Nota("do", "normal"),
+        new Nota("sol", "normal"),
+        new Nota("la", "normal"),
+        new Nota("sol", "normal"),
+        new Nota("fa", "normal"),
+        new Nota("mi", "normal"),
+        new Nota("do", "normal"),
+    ], "fr")
+);    
+
+partituras.push(
+    new Partitura("We Wish You a Merry Christmas", [
+        new Nota("sol", "normal"),
+        new Nota("la", "normal"),
+        new Nota("sol", "normal"),
+        new Nota("mi", "normal"),
+        new Nota("sol", "normal"),
+        new Nota("fa", "normal"),
+        new Nota("re", "normal"),
+        new Nota("re", "normal"),
+        new Nota("mi", "normal"),
+        new Nota("fa", "normal"),
+        new Nota("re", "normal"),
+        new Nota("sol", "normal"),
+        new Nota("sol", "normal"),
+        new Nota("mi", "normal"),
+        new Nota("fa", "normal"),
+        new Nota("re", "normal"),
+        new Nota("do", "normal"),
+    ], "en")
+);
 
 addCerca("do", "normal");
 addCerca("re", "normal");

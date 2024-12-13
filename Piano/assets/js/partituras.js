@@ -62,4 +62,13 @@ function tablaPartitura() {
         }
     }
 }
+
+let login = document.getElementById("login");
+login.onclick = function() {
+    let width = 800;
+    let height = 500;
+    let left = (screen.width / 2) - (width / 2);
+    let top = (screen.height / 2) - (height / 2);
+    ventana = window.open("./login.html", "Login", `width=${width}px, height=${height}px, top=${top}, left=${left}`);
+};
 tablaPartitura();
