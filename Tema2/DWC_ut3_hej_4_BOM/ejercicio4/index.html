@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diferencias horarias</title>
+    <style>
+        form {
+            display: flex;
+            align-items: center;
+        }
+        img {
+            margin: 0 10px;
+        }
+        input {
+            width: 150px;
+            height: 35px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            margin-left: 20px;
+            height: 35px;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #resultado {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label for="horario1"></label>
+        <input type="datetime-local" id="horario1" name="horario1">
+        <img src="./svg/arrow.svg" style="width:30px">
+        <label for="horario2"></label>
+        <input type="datetime-local" id="horario2" name="horario2">
+        <button type="button" onclick="calcularDiferencia()">Calcular</button>
+    </form>
+    <p id="resultado"></p>
+    <script src="./js/ejercicio4.js"></script>
+</body>
+</html>
