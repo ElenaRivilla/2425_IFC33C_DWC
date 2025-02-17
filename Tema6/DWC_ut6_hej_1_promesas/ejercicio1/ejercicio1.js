@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', cargaDOM);
 
 function cargaDOM() {
-    let boton = document.querySelector('#button');
     let input = document.querySelector('#username');
     let p = document.querySelector('#error');
     let usuarios = ['Alice', 'Bob', 'Charlie'];
