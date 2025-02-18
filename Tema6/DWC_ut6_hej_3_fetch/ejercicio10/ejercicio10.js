@@ -18,7 +18,7 @@ function fetchAlbum(){
         })
         .then((response) => {
             if(!response.ok){
-                throw new Error
+                throw new Error('Error en la respuesta del fetch');
             }
             return response.json();
         })
