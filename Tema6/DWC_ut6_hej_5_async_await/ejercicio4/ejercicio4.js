@@ -1,6 +1,32 @@
 document.addEventListener('DOMContentLoaded', cargaDOM);
 
-function cargaDOM() {
+function cargaDOM(){
+    esperaDatos();
+}
+async function esperaDatos() {
+    try {
+        let urls = ["https://jsonplaceholder.typicode.com/posts",
+            "https://jsonplaceholder.typicode.com/users",
+            "https://jsonplaceholder.typicode.com/comments"]
+
+        let promesas = []
+        for (let url of urls) {
+            promesas.push(fetch(url))
+        }
+        const responses = await Promise.all(promesas);
+        let respuestaPost = await responses[0].json()
+        let respuestaUsers = await responses[1].json()
+        let respuestaComent = await responses[2].json() 
+
+        console.log('Total de publicaciones:', respuestaPost.length);
+        console.log('Total de usuarios:', respuestaUsers.length);
+        console.log('Total de comentarios:', respuestaComent.length);
+    } catch (error) {
+        console.log("Error", error)
+    }
+}
+
+/* function cargaDOM() {
     Promise.all([obtenerDatos()])
         .then(results => {
             let totalPosts = results[0][0].length;
@@ -31,4 +57,4 @@ async function obtenerDatos() {
     } catch (error) {
         console.error("Error en el fetch");
     }
-}
+} */
