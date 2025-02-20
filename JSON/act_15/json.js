@@ -1,3 +1,72 @@
+/*
+let contenedores = `[
+    {
+        "tipo":"grande",
+        "envases":[
+            {
+                "tipo":"grandeAncho",
+                "liquidos":{
+                    "tipo": "alimentos",
+                    "contenido": ["agua", "leche", "aceite", "vinagre"]
+                }
+            },
+            {
+                "tipo":"grandeAlto",
+                "liquidos":{
+                    "tipo": "alimentos",
+                    "contenido": ["agua", "leche", "aceite", "vinagre"]
+                }
+            }
+            
+        ]
+    },
+    {
+        "tipo":"mediano",
+        "envases": [
+            {
+                "tipo":"medianoAncho",
+                "liquidos":{
+                    "tipo": "alimentos",
+                    "contenido": ["agua", "leche", "aceite", "vinagre"]
+                }
+            },
+            {
+                "tipo":"medianoAlto",
+                "liquidos":{
+                    "tipo": "corrosivos",
+                    "contenido": ["lejia", "amoniaco", "jabon", "aguarras", "alcohol", "gasolina"]
+                }
+            },
+            {
+                "tipo":"pequeño",
+                "liquidos":{
+                    "tipo": "corrosivos",
+                    "contenido": ["lejia", "amoniaco", "jabon", "aguarras", "alcohol", "gasolina"]
+                }
+            }     
+        ]
+    },
+    {
+        "tipo":"vertical",
+        "envases": [
+            {
+                "tipo":"grandeAlto",
+                "liquidos":{
+                    "tipo": "alimentos",
+                    "contenido": ["agua", "leche", "aceite", "vinagre"]
+                }
+            },
+            {
+                "tipo":"medianoAlto",
+                "liquidos":{
+                    "tipo": "corrosivos",
+                    "contenido": ["lejia", "amoniaco", "jabon", "aguarras", "alcohol", "gasolina"]
+                }
+            },
+        ]
+    }
+]`
+*/
 let envasados = {
     "contenedor_grande" : {
         "grande_ancho": [
